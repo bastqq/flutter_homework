@@ -29,6 +29,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Container()));
+    return Scaffold(
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.blue,
+          ),
+          width: 300,
+          height: 150,
+        ),
+      ),
+    );
   }
 }
