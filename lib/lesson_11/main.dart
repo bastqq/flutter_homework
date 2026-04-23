@@ -35,32 +35,34 @@ class _MyHomePageState extends State<MyHomePage> {
           spacing: 8,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Color.fromRGBO(9, 110, 234, 1),
-              ),
-              width: 300,
-              height: 150,
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 10, bottom: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    spacing: 10,
-                    children: [
-                      Icon(Icons.star, color: Colors.yellow),
-                      Text(
-                        'Привіт, Flutter!',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+            Flexible(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Color.fromRGBO(9, 110, 234, 1),
+                ),
+                width: 300,
+                height: double.infinity,
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10, left: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      spacing: 10,
+                      children: [
+                        Icon(Icons.star, color: Colors.yellow),
+                        Text(
+                          'Привіт, Flutter!',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Icon(Icons.star, color: Colors.yellow),
-                    ],
+                        Icon(Icons.star, color: Colors.yellow),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -73,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 300,
               height: 150,
               child: Align(
-                alignment: Alignment.bottomRight,
+                alignment: Alignment.center,
                 child: Padding(
                   padding: const EdgeInsets.only(right: 10, bottom: 10),
                   child: Row(
