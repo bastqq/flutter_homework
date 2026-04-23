@@ -38,6 +38,28 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           width: 300,
           height: 150,
+          child: Align(
+            alignment: Alignment.bottomRight,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 10, bottom: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                spacing: 10,
+                children: [
+                  Icon(Icons.star, color: Colors.yellow),
+                  Text(
+                    'Привіт, Flutter!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Icon(Icons.star, color: Colors.yellow),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );
