@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_homework/lesson_11/widgets_lesson_11.dart';
 import 'package:flutter_homework/lesson_12/feat-FLAB-12-homework-p2.dart';
-import 'package:flutter_homework/main.dart';
-//import 'package:flutter_homework/lesson_12/widgets_second_part_screen.dart';
-//import 'package:flutter_homework/lesson_11/lesson_11.dart';
 
 class WidgetsScreen extends StatelessWidget {
   const WidgetsScreen({super.key});
