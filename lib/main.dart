@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_homework/widgets_main_screen.dart';
+import 'package:flutter_homework/lesson_14/router.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
   runApp(const FlutterWidgetsApp());
@@ -10,7 +11,7 @@ class FlutterWidgetsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomeScreen());
+    return MaterialApp.router(routerConfig: router);
   }
 }
 
@@ -30,14 +31,14 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             FeatureCard(
-              title: 'Widgets',
-              onTap:
-                  () => Navigator.push(
-                    context,
-                    MaterialPageRoute<Widget>(
-                      builder: (context) => const WidgetsScreen(),
-                    ),
-                  ),
+              title: 'Widgetss',
+              onTap: () => context.go('/widgets'),
+              // () => Navigator.push(
+              //   context,
+              //   MaterialPageRoute<Widget>(
+              //     builder: (context) => const WidgetsScreen(),
+              //   ),
+              // ),
             ),
           ],
         ),

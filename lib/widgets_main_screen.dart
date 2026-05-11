@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_homework/lesson_11/widgets_lesson_11.dart';
-import 'package:flutter_homework/lesson_12/feat-FLAB-12-homework-p2.dart';
-import 'package:flutter_homework/lesson_13/homework_lesson_13.dart';
+import 'package:go_router/go_router.dart';
 
 class WidgetsScreen extends StatelessWidget {
   const WidgetsScreen({super.key});
@@ -23,15 +21,15 @@ class WidgetsScreen extends StatelessWidget {
               description:
                   'Container, SizedBox, Padding, Align, Center, Text, Row, '
                   'Column, Expanded, Buttons, Scroll',
-              onTap:
-                  () => Navigator.push(
-                    context,
-                    MaterialPageRoute<Widget>(
-                      builder:
-                          (context) =>
-                              const MyHomePage(title: 'Widgets Part 1'),
-                    ),
-                  ),
+              onTap: () => context.goNamed('Widgets1'),
+              //  Navigator.push(
+              //   context,
+              //   MaterialPageRoute<Widget>(
+              //     builder:
+              //         (context) =>
+              //             const MyHomePage(title: 'Widgets Part 1'),
+              //   ),
+              // ),
             ),
 
             NavigationCard(
@@ -40,13 +38,13 @@ class WidgetsScreen extends StatelessWidget {
                   'Custom Widgets, Stateless vs Stateful Widgets, '
                   'Gesture Detector & InkWel, '
                   'TextFields & TextFormFields',
-              onTap:
-                  () => Navigator.push(
-                    context,
-                    MaterialPageRoute<Widget>(
-                      builder: (context) => const WidgetsP2(),
-                    ),
-                  ),
+              onTap: () => context.goNamed('Widgets2'),
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute<Widget>(
+              //     builder: (context) => const WidgetsP2(),
+              //   ),
+              // ),
             ),
 
             NavigationCard(
@@ -54,14 +52,16 @@ class WidgetsScreen extends StatelessWidget {
               description:
                   'Understanding how Flutters layout system works,'
                   ' including theconcept of constraints',
-              onTap:
-                  () => Navigator.push(
-                    context,
-                    MaterialPageRoute<Widget>(
-                      builder:
-                          (context) => const WidgetConstrainsTrainingScreen(),
-                    ),
-                  ),
+              onTap: () => context.goNamed('Constraints'),
+              //        Navigator.push(
+              //         context,
+              //         MaterialPageRoute<Widget>(
+              //           builder:
+              //               (context) =>
+              //Wconst WidgetConstrainsTrainingScreen(),
+              //         ),
+              //       ),
+              // ),
             ),
           ],
         ),
