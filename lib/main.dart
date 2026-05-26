@@ -30,16 +30,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            FeatureCard(
-              title: 'Widgetss',
-              onTap: () => context.go('/widgets'),
-              // () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute<Widget>(
-              //     builder: (context) => const WidgetsScreen(),
-              //   ),
-              // ),
-            ),
+            FeatureCard(title: 'Widgetss', onTap: () => context.go('/widgets')),
           ],
         ),
       ),
