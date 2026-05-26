@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_homework/lesson_11/widgets_lesson_11.dart';
 import 'package:flutter_homework/lesson_12/feat-FLAB-12-homework-p2.dart';
+import 'package:flutter_homework/lesson_13/homework_lesson_13.dart';
 
 class WidgetsScreen extends StatelessWidget {
   const WidgetsScreen({super.key});
@@ -44,6 +45,21 @@ class WidgetsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute<Widget>(
                       builder: (context) => const WidgetsP2(),
+                    ),
+                  ),
+            ),
+
+            NavigationCard(
+              title: 'understanding constraints ',
+              description:
+                  'Understanding how Flutters layout system works,'
+                  ' including theconcept of constraints',
+              onTap:
+                  () => Navigator.push(
+                    context,
+                    MaterialPageRoute<Widget>(
+                      builder:
+                          (context) => const WidgetConstrainsTrainingScreen(),
                     ),
                   ),
             ),
