@@ -35,11 +35,7 @@ class CubitView extends StatelessWidget {
           Text('CUBIT Homework Screen', style: TextStyle(fontSize: 24)),
           BlocBuilder<HWCubitLogic, int>(
             builder: (context, state) {
-              return Text(
-                //context.watch<HomeworkBlocLogic>().state.toString(),
-                '$state',
-                style: TextStyle(fontSize: 24),
-              );
+              return Text('$state', style: TextStyle(fontSize: 24));
             },
           ),
           FloatingActionButton(

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomeworkBlocLogic extends Bloc<HomeworkEvent, int> {
-  HomeworkBlocLogic() : super(1) {
+class HomeworkBloc extends Bloc<HomeworkEvent, int> {
+  HomeworkBloc() : super(1) {
     on<IncrementEvent>(_increment);
     on<DecrementEvent>(_decrement);
   }
@@ -21,4 +21,4 @@ class DecrementEvent extends HomeworkEvent {}
 
 class IncrementEvent extends HomeworkEvent {}
 
-class HomeworkEvent {}
+sealed class HomeworkEvent {}

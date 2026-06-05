@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_homework/lesson_18/homework_bloc/homework_block_logic.dart';
+import 'package:flutter_homework/lesson_18/homework_bloc/homework_bloc_logic.dart';
 
 class HomeworkBlocScreen extends StatefulWidget {
   const HomeworkBlocScreen({super.key});
@@ -13,7 +13,7 @@ class _HomeworkBlocScreenState extends State<HomeworkBlocScreen> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => HomeworkBlocLogic())],
+      providers: [BlocProvider(create: (context) => HomeworkBloc())],
       child: Scaffold(
         appBar: AppBar(title: Text('BLoC Homework')),
         body: BlocView(),
@@ -33,23 +33,17 @@ class BlocView extends StatelessWidget {
         spacing: 16,
         children: [
           Text('BLoC Homework Screen', style: TextStyle(fontSize: 24)),
-          BlocBuilder<HomeworkBlocLogic, int>(
+          BlocBuilder<HomeworkBloc, int>(
             builder: (context, state) {
-              return Text(
-                //context.watch<HomeworkBlocLogic>().state.toString(),
-                '$state',
-                style: TextStyle(fontSize: 24),
-              );
+              return Text('$state', style: TextStyle(fontSize: 24));
             },
           ),
           FloatingActionButton(
-            onPressed:
-                () => context.read<HomeworkBlocLogic>().add(IncrementEvent()),
+            onPressed: () => context.read<HomeworkBloc>().add(IncrementEvent()),
             child: Icon(Icons.add),
           ),
           FloatingActionButton(
-            onPressed:
-                () => context.read<HomeworkBlocLogic>().add(DecrementEvent()),
+            onPressed: () => context.read<HomeworkBloc>().add(DecrementEvent()),
             child: Icon(Icons.remove),
           ),
         ],

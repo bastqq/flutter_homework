@@ -30,7 +30,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            FeatureCard(title: 'Widgetss', onTap: () => context.go('/widgets')),
+            FeatureCard(
+              title: 'Widgetss',
+              onTap: () => context.goNamed('widgets'),
+            ),
           ],
         ),
       ),
