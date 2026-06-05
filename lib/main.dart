@@ -31,6 +31,10 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             FeatureCard(title: 'Widgetss', onTap: () => context.go('/widgets')),
+            FeatureCard(
+              title: 'Rating App',
+              onTap: () => context.goNamed('RateScreen'),
+            ),
           ],
         ),
       ),
