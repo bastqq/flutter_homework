@@ -22,14 +22,6 @@ class WidgetsScreen extends StatelessWidget {
                   'Container, SizedBox, Padding, Align, Center, Text, Row, '
                   'Column, Expanded, Buttons, Scroll',
               onTap: () => context.goNamed('Widgets1'),
-              //  Navigator.push(
-              //   context,
-              //   MaterialPageRoute<Widget>(
-              //     builder:
-              //         (context) =>
-              //             const MyHomePage(title: 'Widgets Part 1'),
-              //   ),
-              // ),
             ),
 
             NavigationCard(
@@ -39,12 +31,6 @@ class WidgetsScreen extends StatelessWidget {
                   'Gesture Detector & InkWel, '
                   'TextFields & TextFormFields',
               onTap: () => context.goNamed('Widgets2'),
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute<Widget>(
-              //     builder: (context) => const WidgetsP2(),
-              //   ),
-              // ),
             ),
 
             NavigationCard(
@@ -53,15 +39,11 @@ class WidgetsScreen extends StatelessWidget {
                   'Understanding how Flutters layout system works,'
                   ' including theconcept of constraints',
               onTap: () => context.goNamed('Constraints'),
-              //        Navigator.push(
-              //         context,
-              //         MaterialPageRoute<Widget>(
-              //           builder:
-              //               (context) =>
-              //Wconst WidgetConstrainsTrainingScreen(),
-              //         ),
-              //       ),
-              // ),
+            ),
+            NavigationCard(
+              title: 'STATE MANAGMENT',
+              description: '...',
+              onTap: () => context.goNamed('STATE_MANAGMENT'),
             ),
           ],
         ),

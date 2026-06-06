@@ -32,13 +32,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             FeatureCard(
               title: 'Widgetss',
-              onTap: () => context.go('/widgets'),
-              // () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute<Widget>(
-              //     builder: (context) => const WidgetsScreen(),
-              //   ),
-              // ),
+              onTap: () => context.goNamed('widgets'),
             ),
           ],
         ),
