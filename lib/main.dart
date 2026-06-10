@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_homework/lesson_14/router.dart';
+import 'package:flutter_homework/lesson_19/bloc/rate_app_cubit.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
-  runApp(const FlutterWidgetsApp());
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<RatingCubit>(create: (context) => RatingCubit()),
+        // Add other global Cubits or Blocs here
+      ],
+      child: const FlutterWidgetsApp(),
+    ),
+  );
 }
 
 class FlutterWidgetsApp extends StatelessWidget {
@@ -30,6 +40,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            FeatureCard(title: 'Widgetss', onTap: () => context.go('/widgets')),
+            FeatureCard(
+              title: 'Rating App',
+              onTap: () => context.goNamed('RateScreen'),
             FeatureCard(
               title: 'Widgetss',
               onTap: () => context.goNamed('widgets'),
