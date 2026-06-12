@@ -5,6 +5,7 @@ import 'package:flutter_homework/lesson_18/homework_%D1%81ubit/homework_cubit_sc
 import 'package:flutter_homework/lesson_18/homework_bloc/homework_bloc_screen.dart';
 import 'package:flutter_homework/lesson_18/state_managment_base_screen.dart';
 import 'package:flutter_homework/lesson_19/screens/rate_app_screen.dart';
+import 'package:flutter_homework/lesson_21/ball_screen/BallAnimationScreen.dart';
 import 'package:flutter_homework/main.dart';
 import 'package:flutter_homework/widgets_main_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -20,6 +21,11 @@ final GoRouter router = GoRouter(
           path: '/rateapp',
           name: 'RateScreen',
           builder: (context, state) => const RateAppScreen(),
+        ),
+        GoRoute(
+          path: '/ballanimation',
+          name: 'Ball',
+          builder: (context, state) => const BallAnimationScreen(),
         ),
         GoRoute(
           path: '/widgets',
