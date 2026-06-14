@@ -9,6 +9,8 @@ void main() {
     MultiBlocProvider(
       providers: [
         BlocProvider<RatingCubit>(create: (context) => RatingCubit()),
+        // BlocProvider<UserProfileCubit>(
+        // create: (context) => UserProfileCubit(FakeUserRepository()),  ),
         // Add other global Cubits or Blocs here
       ],
       child: const FlutterWidgetsApp(),
@@ -44,9 +46,10 @@ class HomeScreen extends StatelessWidget {
             FeatureCard(
               title: 'Rating App',
               onTap: () => context.goNamed('RateScreen'),
+            ),
             FeatureCard(
-              title: 'Widgetss',
-              onTap: () => context.goNamed('widgets'),
+              title: 'Error handling',
+              onTap: () => context.goNamed('ErrorHendling'),
             ),
           ],
         ),

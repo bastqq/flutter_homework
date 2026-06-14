@@ -9,4 +9,5 @@ abstract class RoutePaths {
   static const String cubitScreen = '/widgets/block_CUBIT';
   static const String stateManagementScreen = '/widgets/STATE_MANAGMENT';
   static const String rateScreen = '/rateapp';
+  static const String errorhandling = '/errorhandling';
 }
