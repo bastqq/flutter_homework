@@ -1,3 +1,7 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_homework/error_handling_homework/data/repository/fake_user_repository.dart';
+import 'package:flutter_homework/error_handling_homework/presentation/cubit/user_profile_cubit.dart';
+import 'package:flutter_homework/error_handling_homework/presentation/ui/screens/user_profile_homework_screen.dart';
 import 'package:flutter_homework/lesson_11/widgets_lesson_11.dart';
 import 'package:flutter_homework/lesson_12/feat-FLAB-12-homework-p2.dart';
 import 'package:flutter_homework/lesson_13/homework_lesson_13.dart';
@@ -20,6 +24,18 @@ final GoRouter router = GoRouter(
           path: '/rateapp',
           name: 'RateScreen',
           builder: (context, state) => const RateAppScreen(),
+        ),
+        GoRoute(
+          path: '/errorhandling',
+          name: 'ErrorHendling',
+          builder:
+              (context, state) => BlocProvider(
+                create:
+                    (context) =>
+                        UserProfileCubit(FakeUserRepository())
+                          ..loadUserProfile(),
+                child: const UserProfileHomeworkScreen(),
+              ),
         ),
         GoRoute(
           path: '/widgets',
