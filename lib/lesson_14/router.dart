@@ -1,3 +1,4 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_homework/lesson_11/widgets_lesson_11.dart';
 import 'package:flutter_homework/lesson_12/feat-FLAB-12-homework-p2.dart';
 import 'package:flutter_homework/lesson_13/homework_lesson_13.dart';
@@ -5,6 +6,8 @@ import 'package:flutter_homework/lesson_18/homework_%D1%81ubit/homework_cubit_sc
 import 'package:flutter_homework/lesson_18/homework_bloc/homework_bloc_screen.dart';
 import 'package:flutter_homework/lesson_18/state_managment_base_screen.dart';
 import 'package:flutter_homework/lesson_19/screens/rate_app_screen.dart';
+import 'package:flutter_homework/lesson_25/presentation/bloc/json_bloc.dart';
+import 'package:flutter_homework/lesson_25/presentation/ui/json_file_ui.dart';
 import 'package:flutter_homework/main.dart';
 import 'package:flutter_homework/widgets_main_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -20,6 +23,15 @@ final GoRouter router = GoRouter(
           path: '/rateapp',
           name: 'RateScreen',
           builder: (context, state) => const RateAppScreen(),
+        ),
+        GoRoute(
+          path: '/jsonFileUi',
+          name: 'JsonFileUi',
+          builder:
+              (context, state) => BlocProvider(
+                create: (context) => MyJsonCubit()..loadJsonData(),
+                child: const JsonFileUi(),
+              ),
         ),
         GoRoute(
           path: '/widgets',
