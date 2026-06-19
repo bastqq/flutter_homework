@@ -20,7 +20,7 @@ class _JsonFileUiState extends State<JsonFileUi> {
         backgroundColor: Colors.blue.shade100,
       ),
       body: BlocBuilder<MyJsonCubit, JsonState>(
-        builder: (context, dynamic state) {
+        builder: (context, state) {
           return switch (state) {
             JsonLoading() => const CircularProgressIndicator(),
 
@@ -77,8 +77,7 @@ class _JsonFileUiState extends State<JsonFileUi> {
                         ),
                       ),
                       subtitle: Text(
-                        // ignore: unnecessary_string_interpolations
-                        '${state.myJsonEntity.chPrediction}',
+                        state.myJsonEntity.chPrediction,
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,

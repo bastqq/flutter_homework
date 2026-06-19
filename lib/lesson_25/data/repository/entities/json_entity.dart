@@ -2,7 +2,6 @@ import 'package:flutter_homework/lesson_25/data/repository/dto/json_decode.dart'
 
 class MyJsonEntity {
   MyJsonEntity({
-    //required this.chequeMagicName,
     required this.chequeId,
     required this.sumReg,
     required this.chPrediction,
@@ -20,7 +19,6 @@ class MyJsonEntity {
           }).toList() ??
           [];
 
-  // final String chequeMagicName;
   final int chequeId;
   final double sumReg;
   List<String> items;
